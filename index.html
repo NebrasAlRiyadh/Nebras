@@ -19,17 +19,16 @@
             height: 100%;
             position: relative;
             display: flex;
-            flex-direction: column; /* تغيير الاتجاه العمودي */
-            justify-content: space-between; /* توزيع العناصر بالتساوي */
+            justify-content: flex-end; /* دفع العناصر إلى أقصى اليمين */
+            align-items: center; /* توسيط العناصر عموديًا */
             padding: 20px; /* إضافة حواف */
         }
         .form-container {
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 10px;
+            padding: 20px;
             border-radius: 10px;
-            width: 20%; /* تغيير العرض إلى 90% ليكون مناسبًا للشاشات الصغيرة */
-            max-width: 200px; /* تعيين أقصى عرض */
-            align-self: flex-end; /* دفع النموذج إلى أسفل اليمين */
+            width: 90%; /* تغيير العرض إلى 90% ليكون مناسبًا للشاشات الصغيرة */
+            max-width: 400px; /* تعيين أقصى عرض */
         }
         .form-container h2 {
             text-align: center;
@@ -55,6 +54,9 @@
             width: 100%;
         }
         .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
             text-align: right; /* محاذاة النص إلى اليمين */
             color: white;
         }
@@ -104,12 +106,12 @@
                 <button type="submit">إرسال الطلب</button>
             </form>
         </div>
+    </div>
 
-        <!-- إضافة معلومات المكتب في الأسفل إلى اليسار -->
-        <div class="footer">
-            <p>0550777987</p>
-            <p>الرياض، حي الشهداء، شارع خالد بن الوليد</p>
-        </div>
+    <!-- إضافة معلومات المكتب في الأسفل إلى اليمين -->
+    <div class="footer">
+        <p>0550777987</p>
+        <p>الرياض، حي الشهداء، شارع خالد بن الوليد</p>
     </div>
 
 </body>
