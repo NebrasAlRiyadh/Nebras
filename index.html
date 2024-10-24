@@ -13,21 +13,23 @@
             direction: rtl;
         }
         .background-image {
-            background-image: url('path-to-your-image.jpeg'); /* تأكد من إضافة مسار الصورة هنا */
+            background-image: url('path-to-your-image.jpeg'); /* تأكد من إضافة مسار الصورة الخلفية هنا */
             background-size: cover;
             background-position: center;
             height: 100%;
             position: relative;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column; /* تغيير الاتجاه العمودي */
+            justify-content: space-between; /* توزيع العناصر بالتساوي */
+            padding: 20px; /* إضافة حواف */
         }
         .form-container {
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
-            width: 90%; /* تغيير العرض إلى 90% ليكون مناسبًا للشاشات الصغيرة */
-            max-width: 400px; /* تعيين أقصى عرض */
+            width: 20%; /* تغيير العرض إلى 90% ليكون مناسبًا للشاشات الصغيرة */
+            max-width: 200px; /* تعيين أقصى عرض */
+            align-self: flex-end; /* دفع النموذج إلى أسفل اليمين */
         }
         .form-container h2 {
             text-align: center;
@@ -53,12 +55,8 @@
             width: 100%;
         }
         .footer {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            font-size: 14px;
+            text-align: right; /* محاذاة النص إلى اليمين */
             color: white;
-            text-align: center; /* محاذاة النص في الوسط */
         }
         .footer p {
             margin: 5px 0;
@@ -107,6 +105,7 @@
             </form>
         </div>
 
+        <!-- إضافة معلومات المكتب في الأسفل إلى اليسار -->
         <div class="footer">
             <p>0550777987</p>
             <p>الرياض، حي الشهداء، شارع خالد بن الوليد</p>
