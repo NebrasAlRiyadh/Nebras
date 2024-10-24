@@ -19,7 +19,7 @@
             height: 100%;
             position: relative;
             display: flex;
-            justify-content: flex-end; /* دفع العناصر إلى أقصى اليمين */
+            justify-content: flex-start; /* دفع العناصر إلى أقصى اليسار */
             align-items: center; /* توسيط العناصر عموديًا */
             padding: 20px; /* إضافة حواف */
         }
@@ -27,8 +27,9 @@
             background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
-            width: 40%; /* تغيير العرض إلى 90% ليكون مناسبًا للشاشات الصغيرة */
-            max-width: 200px; /* تعيين أقصى عرض */
+            width: 50%; /* تغيير العرض إلى 90% ليكون مناسبًا للشاشات الصغيرة */
+            max-width: 400px; /* تعيين أقصى عرض */
+            margin-bottom: 5px; /* إضافة مسافة أسفل النموذج */
         }
         .form-container h2 {
             text-align: center;
@@ -56,9 +57,9 @@
         .footer {
             position: absolute;
             bottom: 10px;
-            right: 10px;
+            right: 10px; /* وضع المعلومات في أسفل اليمين */
             text-align: right; /* محاذاة النص إلى اليمين */
-            color: white;
+            color: #0777b8; /* تغيير لون النص إلى اللون الذي تريده (مثال: برتقالي) */
         }
         .footer p {
             margin: 5px 0;
