@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب نبراس الرياض للاستقدام</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+        }
+        .background-image {
+            background-image: url('path-to-your-image.jpeg'); /* تأكد من إضافة مسار الصورة هنا */
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%; /* تغيير العرض إلى 90% ليكون مناسبًا للشاشات الصغيرة */
+            max-width: 400px; /* تعيين أقصى عرض */
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: white;
+            text-align: center; /* محاذاة النص في الوسط */
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-image">
+        <div class="form-container">
+            <h2>طلب جديد</h2>
+            <form action="https://script.google.com/macros/s/AKfycbzZ_hdlHYNAIFELdhg_NuZXnOYo9TExdI6X5Qx9q7DmPxX9xoiL-aSSqCtQQYNJ3muA/exec" method="POST">
+                <label for="name">الاسم الكامل</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">رقم الجوال</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="job">المهنة</label>
+                <select id="job" name="job" required>
+                    <option value="عاملة منزلية">عاملة منزلية</option>
+                    <option value="سائق خاص">سائق خاص</option>
+                    <option value="عامل منزلي">عامل منزلي</option>
+                </select>
+
+                <label for="country">الدولة</label>
+                <select id="country" name="country" required>
+                    <option value="الفلبين">الفلبين</option>
+                    <option value="كينيا">كينيا</option>
+                    <option value="بنجلاديش">بنجلاديش</option>
+                    <option value="أوغندا">أوغندا</option>
+                    <option value="إثيوبيا">إثيوبيا</option>
+                    <option value="الهند">الهند (سائق فقط)</option>
+                </select>
+
+                <label for="religion">الديانة</label>
+                <select id="religion" name="religion" required>
+                    <option value="مسلم/ة">مسلم/ة</option>
+                    <option value="غير مسلم/ة">غير مسلم/ة</option>
+                </select>
+
+                <label for="details">تفاصيل وشروط أخرى</label>
+                <textarea id="details" name="details" rows="4"></textarea>
+
+                <button type="submit">إرسال الطلب</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>0550777987</p>
+            <p>الرياض، حي الشهداء، شارع خالد بن الوليد</p>
+        </div>
+    </div>
+
+</body>
+</html>
