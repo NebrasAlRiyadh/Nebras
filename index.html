@@ -1,123 +1,19 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
-<html>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-</html>    
 <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>مكتب نبراس الرياض للاستقدام</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            direction: rtl;
-        }
-        
-        .form-container {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            width: 50%; /* تغيير العرض إلى 90% ليكون مناسبًا للشاشات الصغيرة */
-            max-width: 400px; /* تعيين أقصى عرض */
-            margin-bottom: 5px; /* إضافة مسافة أسفل النموذج */
-        }
-        .form-container h2 {
-            text-align: center;
-        }
-        label {
-            display: block;
-            margin-bottom: 10px;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ebe6e6;
-        }
-        button {
-            background-color: #029647;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-        }
-        .footer {
-            position: absolute;
-            bottom: 0px;
-            right: 1000px; /* وضع المعلومات في أسفل اليمين */
-            text-align: right; /* محاذاة النص إلى اليمين */
-            color: #ffffff; /* تغيير لون النص إلى اللون الذي تريده (مثال: برتقالي) */
-        }
-        .footer p {
-            margin: 5px 0;
-        }
-    </style>
 </head>
-<body style="background-color:#0d7e84;">
-    
-   
-        <div class="form-container">
-            <h2>طلب جديد</h2>
-            <form action="https://script.google.com/macros/s/AKfycbzZ_hdlHYNAIFELdhg_NuZXnOYo9TExdI6X5Qx9q7DmPxX9xoiL-aSSqCtQQYNJ3muA/exec" method="POST">
-                <label for="name">الاسم الكامل</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="phone">رقم الجوال</label>
-                <input type="text" id="phone" name="phone" required>
-
-                <label for="job">المهنة</label>
-                <select id="job" name="job" required>
-                    <option value="عاملة منزلية">عاملة منزلية</option>
-                    <option value="سائق خاص">سائق خاص</option>
-                    <option value="عامل منزلي">عامل منزلي</option>
-                </select>
-
-                <label for="country">الدولة</label>
-                <select id="country" name="country" required>
-                    <option value="الفلبين">الفلبين</option>
-                    <option value="كينيا">كينيا</option>
-                    <option value="بنجلاديش">بنجلاديش</option>
-                    <option value="أوغندا">أوغندا</option>
-                    <option value="إثيوبيا">إثيوبيا</option>
-                    <option value="الهند">الهند (سائق فقط)</option>
-                </select>
-
-                <label for="religion">الديانة</label>
-                <select id="religion" name="religion" required>
-                    <option value="مسلم/ة">مسلم/ة</option>
-                    <option value="غير مسلم/ة">غير مسلم/ة</option>
-                </select>
-
-                <label for="details">تفاصيل وشروط أخرى</label>
-                <textarea id="details" name="details" rows="4"></textarea>
-
-                <button type="submit">إرسال الطلب</button>
-            </form>
+<body>
+    <div class="cover-container">
+        <img src="8D837B4B-05A4-4B59-BDAD-0035A1FE0114.jpeg" alt="صورة الغلاف" class="cover-image">
+        <div class="cover-content">
+            <h1>مكتب نبراس الرياض للاستقدام</h1>
+            <p>استقدام العمالة الماهرة من مختلف الدول بكل احترافية وثقة لتلبية احتياجاتكم المنزلية.</p>
+            <a href="form.html" class="cta-button">طلب جديد</a>
         </div>
-
-    <!-- إضافة معلومات المكتب في الأسفل إلى اليمين -->
-    <div class="footer">
-        <p>0550777987</p>
-        <p>الرياض، حي الشهداء، شارع خالد بن الوليد</p>
     </div>
-
-    <div class="nav_bar" id="myNav_bar">
-        <ul>
-            <li><a href="javascript:void(0);" class="icon"
-            onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
-        </ul>
-    </div>
-
-
-
-
-
-
 </body>
 </html>
