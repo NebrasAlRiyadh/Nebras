@@ -13,19 +13,21 @@
         <form action="https://script.google.com/macros/s/AKfycbzZ_hdlHYNAIFELdhg_NuZXnOYo9TExdI6X5Qx9q7DmPxX9xoiL-aSSqCtQQYNJ3muA/exec" method="POST">
             <label for="name">الاسم الكامل</label>
             <input type="text" id="name" name="name" required>
-
+        
             <label for="phone">رقم الجوال</label>
             <input type="text" id="phone" name="phone" required>
-
+        
             <label for="job">المهنة</label>
             <select id="job" name="job" required onchange="updateCountryOptions()">
+                <option value="" selected hidden>اختر...</option>
                 <option value="عاملة منزلية">عاملة منزلية</option>
                 <option value="سائق خاص">سائق خاص</option>
                 <option value="عامل منزلي">عامل منزلي</option>
             </select>
-
+        
             <label for="country">الدولة</label>
             <select id="country" name="country" required>
+                <option value="" selected hidden>اختر...</option>
                 <option value="الفلبين">الفلبين</option>
                 <option value="كينيا">كينيا</option>
                 <option value="بنجلاديش">بنجلاديش</option>
@@ -33,18 +35,47 @@
                 <option value="إثيوبيا">إثيوبيا</option>
                 <option value="الهند">الهند (سائق فقط)</option>
             </select>
-
+        
             <label for="religion">الديانة</label>
             <select id="religion" name="religion" required>
+                <option value="" selected hidden>اختر...</option>
                 <option value="مسلم/ة">مسلم/ة</option>
                 <option value="غير مسلم/ة">غير مسلم/ة</option>
             </select>
-
+        
             <label for="details">تفاصيل وشروط أخرى</label>
             <textarea id="details" name="details" rows="4"></textarea>
-
+        
             <button type="submit">إرسال الطلب</button>
         </form>
+        
+        <script>
+            function updateCountryOptions() {
+                const jobSelect = document.getElementById("job");
+                const countrySelect = document.getElementById("country");
+        
+                // إعادة تعيين الخيارات
+                countrySelect.innerHTML = `
+                    <option value="" selected hidden>اختر...</option>
+                    <option value="الفلبين">الفلبين</option>
+                    <option value="كينيا">كينيا</option>
+                    <option value="بنجلاديش">بنجلاديش</option>
+                    <option value="أوغندا">أوغندا</option>
+                    <option value="إثيوبيا">إثيوبيا</option>
+                    <option value="الهند">الهند (سائق فقط)</option>
+                `;
+        
+                // إذا كانت المهنة سائق خاص، عرض الهند فقط
+                if (jobSelect.value === "سائق خاص") {
+                    countrySelect.innerHTML = `
+                        <option value="" selected hidden>اختر...</option>
+                        <option value="الهند">الهند</option>
+                    `;
+                }
+            }
+        </script>
+
+    </form>
     </div>
 
     <!-- Footer -->
