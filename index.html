@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>نبراس الرياض للاستقدام</title>
+</head>
+<body>
+    <!-- خانة التواصل -->
+    <div class="contact-box">
+        <div class="contact-content">
+            <h3>تواصل معنا</h3>
+            <p>لأي استفسارات، لا تتردد في الاتصال بنا!</p>
+            <a href="#quick-order" class="contact-link">اذهب إلى النموذج</a>
+        </div>
+    </div>
+
+    <!-- عبارات تسويقية -->
+    <div class="marketing-phrases">
+        <h2>خدماتنا المميزة</h2>
+        <p>نقدم لك أفضل الحلول في الاستقدام.</p>
+        <p>خبرة تزيد عن 10 سنوات في هذا المجال.</p>
+        <p>نحن هنا لخدمتك في كل وقت.</p>
+    </div>
+
+    <!-- القسم الرئيسي -->
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>نبراس الرياض للاستقدام</h1>
+            <p>نقدم خدمات استقدام مميزة وموثوقة</p>
+            <a href="#quick-order" class="cta-button">اطلب الآن</a>
+        </div>
+    </header>
+
+    <!-- قسم الطلب السريع -->
+    <section id="quick-order" class="quick-order">
+        <div class="container">
+            <div class="section-header">
+                <h2>طلب سريع</h2>
+                <p>املأ النموذج التالي وسنتواصل معك في أقرب وقت</p>
+            </div>
+            <form action="https://script.google.com/macros/s/AKfycbzZ_hdlHYNAIFELdhg_NuZXnOYo9TExdI6X5Qx9q7DmPxX9xoiL-aSSqCtQQYNJ3muA/exec" 
+            method="POST" 
+            class="order-form" 
+            onsubmit="submitForm(event)">
+                <div id="form-message" class="success-message" style="display:none;">تم إرسال الطلب بنجاح!</div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">الاسم الكامل</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الجوال</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="job">المهنة</label>
+                        <select id="job" name="job" required onchange="updateCountryOptions()">
+                            <option value="" selected disabled>اختر المهنة</option>
+                            <option value="عاملة منزلية">عاملة منزلية</option>
+                            <option value="سائق خاص">سائق خاص</option>
+                            <option value="عامل منزلي">عامل منزلي</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">الجنسية</label>
+                        <select id="country" name="country" required>
+                            <option value="" selected disabled>اختر الجنسية</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="religion">الديانة</label>
+                        <select id="religion" name="religion" required>
+                            <option value="" selected disabled>اختر الديانة</option>
+                            <option value="مسلم/ة">مسلم/ة</option>
+                            <option value="غير مسلم/ ة">غير مسلم/ة</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="submit-button">تقديم الطلب</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>مميزاتنا</h2>
+                <p>نقدم لكم أفضل الخدمات</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>سرعة في الإنجاز</h3>
+                    <p>نضمن لك سرعة إنجاز معاملتك</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💪</div>
+                    <h3>خبرة وكفاءة</h3>
+                    <p>خبرة تزيد عن 10 سنوات</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✓</div>
+                    <h3>ضمان شامل</h3>
+                    <p>ضمان لمدة سنتين</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>تواصل معنا</h2>
+                <p>نحن هنا لخدمتك</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>العنوان</h3>
+                        <p>الرياض، حي الشهداء، شارع خالد بن الوليد</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>رقم الجوال</h3>
+                        <p>0550777987</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>البريد الإلكتروني</h3>
+                        <p>nebrasriyadh@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="الاسم الكامل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="رقم الجوال" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="رسالتك" required></textarea>
+                        </div>
+                        <button type="submit">إرسال</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>نبراس الرياض للاستقدام</h3>
+                    <p>خدمات استقدام موثوقة</p>
+                </div>
+                <div class="social-links">
+                    <h3>تابعنا على</h3>
+                    <div class="social-icons">
+                        <a href="https://snapchat.com/t/6FXjq5RZ" target="_blank">
+                            <img src="SNAPCHAT.png" alt="سناب شات">
+                        </a>
+                                                <a href="https://www.tiktok.com/@nebras.riyadh" target="_blank">
+                            <img src="TIKTOK.png" alt="تيك توك">
+                        </a>
+                        <a href="https://wsend.co/966550777983" target="_blank">
+                            <img src="WHATSAPP.png" alt="واتساب">
+                        </a>
+                        <a href="https://x.com/nbras_1222" target="_blank">
+                            <img src="X.png" alt="تويتر">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة © 2024 نبراس الرياض للاستقدام</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateCountryOptions() {
+            const jobSelect = document.getElementById("job");
+            const countrySelect = document.getElementById("country");
+            
+            if (jobSelect.value === "سائق خاص") {
+                countrySelect.innerHTML = `
+                    <option value="" selected disabled>اختر الجنسية</option>
+                    <option value="الهند">الهند</option>
+                `;
+            } else {
+                countrySelect.innerHTML = `
+                    <option value="" selected disabled>اختر الجنسية</option>
+                    <option value="الفلبين">الفلبين</option>
+                    <option value="كينيا">كينيا</option>
+                    <option value="بنجلاديش">بنجلاديش</option>
+                    <option value="أوغندا">أوغندا</option>
+                    <option value="إثيوبيا">إثيوبيا</option>
+                `;
+            }
+        }
+    </script>
+
+<script>
+    function submitForm(event) {
+        event.preventDefault(); // منع الانتقال إلى صفحة جديدة
+        const form = event.target;
+        const formData = new FormData(form);
+        
+        // إرسال البيانات باستخدام Fetch API
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('form-message').style.display = 'block';
+            form.reset(); // إعادة تعيين النموذج بعد الإرسال
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+</script>
+
+
+</body>
+</html>
