@@ -73,40 +73,6 @@ body {
     font-size: 1rem;
 }
 
-/* الرسالة الانتقالية */
-.page-message {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-.page-message p {
-    font-size: 1.2rem;
-    color: #333;
-}
-
-/* الرسالة على اليمين */
-.right-message {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-}
-
-.right-message p {
-    font-size: 1.2rem;
-    color: #333;
-}
-
 /* القسم الرئيسي */
 .hero-section {
     position: relative;
@@ -116,7 +82,7 @@ body {
     background-position: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center ;
     text-align: center;
     color: white;
 }
@@ -166,7 +132,7 @@ body {
     background-color: white;
 }
 
-.section -header {
+.section-header {
     text-align: center;
     margin-bottom: 50px;
 }
@@ -213,7 +179,7 @@ body {
     width: 100%;
     padding: 15px;
     background-color: #007bff; /* لون الزر الأزرق */
-    color: white;
+    color : white;
     border: none;
     border-radius: 8px;
     font-size: 1.1rem;
