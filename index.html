@@ -6,14 +6,50 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <title>نبراس الرياض للاستقدام</title>
+    <style>
+        .fixed-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff; /* لون الخلفية */
+            z-index: 1000; /* اجعلها فوق كل شيء */
+            padding: 10px; /* إضافة padding لتبدو أفضل */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+            text-align: center; /* توسيط النص */
+        }
+        /* تنسيق الزر */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3; /* تغيير لون الزر عند المرور */
+        }
+        #quick-order {
+            margin-top: 70px; /* مسافة فوق النموذج لتجنب التداخل مع الرسالة الثابتة */
+        }
+    </style>
 </head>
 <body>
+    <!-- الرسالة الثابتة -->
+    <div class="fixed-message">
+        مرحبًا بكم في مكتب نبراس الرياض للاستقدام!
+        <a href="#contact-form" class="btn">اذهب إلى نموذج التواصل</a>
+    </div>
+
     <!-- خانة التواصل -->
     <div class="contact-box">
         <div class="contact-content">
             <h3>تواصل معنا</h3>
             <p>لأي استفسارات، لا تتردد في الاتصال بنا!</p>
-            <a href="#quick-order" class="contact-link">اذهب إلى النموذج</a>
         </div>
     </div>
 
@@ -117,8 +153,12 @@
     </section>
 
     <!-- قسم التواصل -->
-    <section class="contact">
+    <section class="contact" id="contact-form">
         <div class="container">
+            <form action="https://script.google.com/macros/s/AKfycbzZ_hdlHYNAIFELdhg_NuZXnOYo9TExdI6X5Qx9q7DmPxX9xoiL-aSSqCtQQYNJ3muA/exec"
+            method="POST" 
+            class="order-form" 
+            onsubmit="submitForm(event)">
             <div class="section-header">
                 <h2>تواصل معنا</h2>
                 <p>نحن هنا لخدمتك</p>
@@ -132,6 +172,7 @@
                     <div class="info-item">
                         <h3>رقم الجوال</h3>
                         <p>0550777987</p>
+                        <p>0550777983</p>
                     </div>
                     <div class="info-item">
                         <h3>البريد الإلكتروني</h3>
@@ -139,17 +180,18 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form onsubmit="submitContactForm(event)">
                         <div class="form-group">
-                            <input type="text" placeholder="الاسم الكامل" required>
+                            <input type="text" name="contact_name" placeholder="الاسم الكامل" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="رقم الجوال" required>
+                            <input type="tel" name="contact_phone" placeholder="رقم الجوال" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="رسالتك" required></textarea>
+                            <textarea name="contact_message" placeholder="رسالتك" required></textarea>
                         </div>
                        <button type="submit" class="submit-button">أرسال</button>
+                       <div id="contact-form-message" class="success-message" style="display:none;">تم إرسال رسالتك بنجاح!</div>
                     </form>
                 </div>
             </div>
@@ -170,69 +212,58 @@
                         <a href="https://snapchat.com/t/6FXjq5RZ" target="_blank">
                             <img src="SNAPCHAT.png" alt="سناب شات">
                         </a>
-                                                <a href="https://www.tiktok.com/@nebras.riyadh" target="_blank">
-                            <img src="TIKTOK.png" alt="تيك توك">
+                        <a href="https://www.tiktok.com/@nebras.riyadh" target="_blank">
+                            <img src="TIKTOK.png"                            alt="تيك توك">
                         </a>
                         <a href="https://wsend.co/966550777983" target="_blank">
-                            <img src="WHATSAPP.png" alt="واتساب">
+                            <img src="WHATSAPP.png" alt="WHATSAPP">
                         </a>
-                        <a href="https://x.com/nbras_1222" target="_blank">
-                            <img src="X.png" alt="تويتر">
+                        <a href="https://x.com/nbras_1222?s=21&t=FiiARyxpwP5vfx-o0MrIGw" target="_blank">
+                            <img src="X.png" alt="x">
                         </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>جميع الحقوق محفوظة © 2024 نبراس الرياض للاستقدام</p>
+                <p>&copy; 2024 نبراس الرياض للاستقدام. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        function submitForm(event) {
+            event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
+            const formMessage = document.getElementById('form-message');
+            formMessage.style.display = 'block'; // عرض رسالة التأكيد
+            document.querySelector('.order-form').reset(); // إعادة تعيين النموذج
+        }
+
+        function submitContactForm(event) {
+            event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
+            const contactFormMessage = document.getElementById('contact-form-message');
+            contactFormMessage.style.display = 'block'; // عرض رسالة التأكيد
+            document.querySelector('.contact-form form').reset(); // إعادة تعيين النموذج
+        }
+
         function updateCountryOptions() {
-            const jobSelect = document.getElementById("job");
-            const countrySelect = document.getElementById("country");
-            
-            if (jobSelect.value === "سائق خاص") {
-                countrySelect.innerHTML = `
-                    <option value="" selected disabled>اختر الجنسية</option>
-                    <option value="الهند">الهند</option>
-                `;
-            } else {
-                countrySelect.innerHTML = `
-                    <option value="" selected disabled>اختر الجنسية</option>
-                    <option value="الفلبين">الفلبين</option>
-                    <option value="كينيا">كينيا</option>
-                    <option value="بنجلاديش">بنجلاديش</option>
-                    <option value="أوغندا">أوغندا</option>
-                    <option value="إثيوبيا">إثيوبيا</option>
-                `;
+            const jobSelect = document.getElementById('job');
+            const countrySelect = document.getElementById('country');
+            countrySelect.innerHTML = ''; // مسح الخيارات السابقة
+            const countries = {
+                "عاملة منزلية": ["اوغندا", "الفلبين", "كينيا", "بانجلاديش", "اثيوبيا"],
+                "سائق خاص": ["الهند"],
+                "عامل منزلي": ["اوغندا", "الفلبين", "كينيا", "بانجلاديش", "اثيوبيا"]
+            };
+            const selectedJob = jobSelect.value;
+            if (countries[selectedJob]) {
+                countries[selectedJob].forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country;
+                    option.textContent = country;
+                    countrySelect.appendChild(option);
+                });
             }
         }
     </script>
-
-<script>
-    function submitForm(event) {
-        event.preventDefault(); // منع الانتقال إلى صفحة جديدة
-        const form = event.target;
-        const formData = new FormData(form);
-        
-        // إرسال البيانات باستخدام Fetch API
-        fetch(form.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('form-message').style.display = 'block';
-            form.reset(); // إعادة تعيين النموذج بعد الإرسال
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    }
-</script>
-
-
 </body>
 </html>
