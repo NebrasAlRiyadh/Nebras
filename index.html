@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://script.google.com/macros/s/AKfycbx6CcwY-08Gh2ACH9B4FjmPb4c6a1NtaIzDydjGclIpffdFd1DxtTo9Vzd8l-H7OCu5/exec" rel="stylesheet">
     <title>نبراس الرياض للاستقدام</title>
     <style>
         .fixed-message {
@@ -78,11 +78,10 @@
                 <h2>طلب سريع</h2>
                 <p>املأ النموذج التالي وسنتواصل معك في أقرب وقت</p>
             </div>
-            <form action="https://script.google.com/macros/s/AKfycbzZ_hdlHYNAIFELdhg_NuZXnOYo9TExdI6X5Qx9q7DmPxX9xoiL-aSSqCtQQYNJ3muA/exec" 
+            <form action="https://script.google.com/macros/s/AKfycbx6CcwY-08Gh2ACH9B4FjmPb4c6a1NtaIzDydjGclIpffdFd1DxtTo9Vzd8l-H7OCu5/exec" 
             method="POST" 
             class="order-form" 
             onsubmit="submitForm(event)">
-                <input type="hidden" name="formType" value="طلب سريع">
                 <div id="form-message" class="success-message" style="display:none;">تم إرسال الطلب بنجاح!</div>
                 <div class="form-grid">
                     <div class="form-group">
@@ -178,7 +177,6 @@
                 </div>
                 <div class="contact-form">
                     <form onsubmit="submitContactForm(event)">
-                        <input type="hidden" name="formType" value="نموذج تواصل">
                         <div class="form-group">
                             <input type="text" name="contact_name" placeholder="الاسم الكامل" required>
                         </div>
@@ -205,60 +203,62 @@
                     <p>خدمات استقدام موثوقة</p>
                 </div>
                 <div class="social-links">
-                    <h3>تابعنا على</h3><div class="social-links">
-                        <h3>تابعنا على</h3>
-                        <div class="social-icons">
-                            <a href="#" target="_blank">فيسبوك</a>
-                            <a href="#" target="_blank">تويتر</a>
-                            <a href="#" target="_blank">انستغرام</a>
-                        </div>
+                    <h3>تابعنا على</h3>
+                    <div class="social-icons">
+                        <a href="https://snapchat.com/t/6FXjq5RZ" target="_blank">
+                            <img src="SNAPCHAT.png" alt="سناب شات">
+                        </a>
+                        <a href="https://www.tiktok.com/@nebras.riyadh" target="_blank">
+                            <img src="TIKTOK.png"                            alt="تيك توك">
+                        </a>
+                        <a href="https://wsend.co/966550777983" target="_blank">
+                            <img src="WHATSAPP.png" alt="WHATSAPP">
+                        </a>
+                        <a href="https://x.com/nbras_1222?s=21&t=FiiARyxpwP5vfx-o0MrIGw" target="_blank">
+                            <img src="X.png" alt="x">
+                        </a>
                     </div>
                 </div>
             </div>
-            <p>جميع الحقوق محفوظة &copy; 2024 نبراس الرياض للاستقدام</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 نبراس الرياض للاستقدام. جميع الحقوق محفوظة.</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // تحديث خيارات الجنسية بناءً على المهنة المحددة
-        function updateCountryOptions() {
-            const job = document.getElementById("job").value;
-            const countrySelect = document.getElementById("country");
-            countrySelect.innerHTML = ""; // مسح الخيارات السابقة
-
-            let countries = [];
-            if (job === "عاملة منزلية") {
-                countries = ["إندونيسيا", "الفلبين", "سيريلانكا", "مصر"];
-            } else if (job === "سائق خاص") {
-                countries = ["سودان", "مصر", "الأردن"];
-            } else if (job === "عامل منزلي") {
-                countries = ["مصر", "الهند", "باكستان"];
-            }
-
-            countries.forEach(country => {
-                const option = document.createElement("option");
-                option.value = country;
-                option.textContent = country;
-                countrySelect.appendChild(option);
-            });
-        }
-
-        // إرسال الطلب السريع
         function submitForm(event) {
-            event.preventDefault();
-            const formMessage = document.getElementById("form-message");
-            formMessage.style.display = "block";
-            // يمكنك إضافة كود لإرسال البيانات إلى Google Sheets هنا إذا لزم الأمر
-            event.target.reset(); // إعادة تعيين النموذج بعد الإرسال
+            event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
+            const formMessage = document.getElementById('form-message');
+            formMessage.style.display = 'block'; // عرض رسالة التأكيد
+            document.querySelector('.order-form').reset(); // إعادة تعيين النموذج
         }
 
-        // إرسال نموذج التواصل
         function submitContactForm(event) {
-            event.preventDefault();
-            const contactFormMessage = document.getElementById("contact-form-message");
-            contactFormMessage.style.display = "block";
-            // يمكنك إضافة كود لإرسال البيانات إلى Google Sheets هنا إذا لزم الأمر
-            event.target.reset(); // إعادة تعيين النموذج بعد الإرسال
+            event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
+            const contactFormMessage = document.getElementById('contact-form-message');
+            contactFormMessage.style.display = 'block'; // عرض رسالة التأكيد
+            document.querySelector('.contact-form form').reset(); // إعادة تعيين النموذج
+        }
+
+        function updateCountryOptions() {
+            const jobSelect = document.getElementById('job');
+            const countrySelect = document.getElementById('country');
+            countrySelect.innerHTML = ''; // مسح الخيارات السابقة
+            const countries = {
+                "عاملة منزلية": ["اوغندا", "الفلبين", "كينيا", "بانجلاديش", "اثيوبيا"],
+                "سائق خاص": ["الهند"],
+                "عامل منزلي": ["اوغندا", "الفلبين", "كينيا", "بانجلاديش", "اثيوبيا"]
+            };
+            const selectedJob = jobSelect.value;
+            if (countries[selectedJob]) {
+                countries[selectedJob].forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country;
+                    option.textContent = country;
+                    countrySelect.appendChild(option);
+                });
+            }
         }
     </script>
 </body>
