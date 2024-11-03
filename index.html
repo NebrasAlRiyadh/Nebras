@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://script.google.com/macros/s/AKfycbx6CcwY-08Gh2ACH9B4FjmPb4c6a1NtaIzDydjGclIpffdFd1DxtTo9Vzd8l-H7OCu5/exec" rel="stylesheet">
+    <link href="https://script.google.com/macros/s/AKfycbwyApa0ihYHwIyN3_NeYt7LCbPkiSv9q93XHp-ROGOc-1tEcTuqx_bGVQmRtIUOwmvL/exec" rel="stylesheet">
     <title>نبراس الرياض للاستقدام</title>
     <style>
         .fixed-message {
@@ -53,13 +53,6 @@
         </div>
     </div>
 
-    <!-- عبارات تسويقية -->
-    <div class="marketing-phrases">
-        <h2>خدماتنا المميزة</h2>
-        <p>نقدم لك أفضل الحلول في الاستقدام.</p>
-        <p>خبرة تزيد عن 10 سنوات في هذا المجال.</p>
-        <p>نحن هنا لخدمتك في كل وقت.</p>
-    </div>
 
     <!-- القسم الرئيسي -->
     <header class="hero-section">
@@ -78,7 +71,7 @@
                 <h2>طلب سريع</h2>
                 <p>املأ النموذج التالي وسنتواصل معك في أقرب وقت</p>
             </div>
-            <form action="https://script.google.com/macros/s/AKfycbx6CcwY-08Gh2ACH9B4FjmPb4c6a1NtaIzDydjGclIpffdFd1DxtTo9Vzd8l-H7OCu5/exec" 
+            <form action="https://script.google.com/macros/s/AKfycbwyApa0ihYHwIyN3_NeYt7LCbPkiSv9q93XHp-ROGOc-1tEcTuqx_bGVQmRtIUOwmvL/exec" 
             method="POST" 
             class="order-form" 
             onsubmit="submitForm(event)">
@@ -118,6 +111,10 @@
                             <option value="مسلم/ة">مسلم/ة</option>
                             <option value="غير مسلم/ ة">غير مسلم/ة</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="religion"> تفاصيل وشروط أخرى </label>
+                        <textarea name="contact_message" placeholder="اكتب هنا" required></textarea>
                     </div>
                 </div>
                 <button type="submit" class="submit-button">تقديم الطلب</button>
@@ -246,9 +243,9 @@
             const countrySelect = document.getElementById('country');
             countrySelect.innerHTML = ''; // مسح الخيارات السابقة
             const countries = {
-                "عاملة منزلية": ["اوغندا", "الفلبين", "كينيا", "بانجلاديش", "اثيوبيا"],
+                "عاملة منزلية": ["الفلبين", "اوغندا", "كينيا", "بانجلاديش", "اثيوبيا"],
                 "سائق خاص": ["الهند"],
-                "عامل منزلي": ["اوغندا", "الفلبين", "كينيا", "بانجلاديش", "اثيوبيا"]
+                "عامل منزلي": ["الفلبين", "اوغندا", "كينيا", "بانجلاديش", "اثيوبيا"]
             };
             const selectedJob = jobSelect.value;
             if (countries[selectedJob]) {
