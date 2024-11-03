@@ -1,254 +1,1 @@
-<!DOCTYPE html>
-<html dir="rtl" lang="ar">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://script.google.com/macros/s/AKfycbwyApa0ihYHwIyN3_NeYt7LCbPkiSv9q93XHp-ROGOc-1tEcTuqx_bGVQmRtIUOwmvL/exec" rel="stylesheet">
-    <title>نبراس الرياض للاستقدام</title>
-    <style>
-        .fixed-message {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff; /* لون الخلفية */
-            z-index: 1000; /* اجعلها فوق كل شيء */
-            padding: 10px; /* إضافة padding لتبدو أفضل */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل خفيف */
-            text-align: center; /* توسيط النص */
-        }
-        /* تنسيق الزر */
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            text-align: center;
-        }
-        .btn:hover {
-            background-color: #0056b3; /* تغيير لون الزر عند المرور */
-        }
-        #quick-order {
-            margin-top: 70px; /* مسافة فوق النموذج لتجنب التداخل مع الرسالة الثابتة */
-        }
-    </style>
-</head>
-<body>
-    <!-- الرسالة الثابتة -->
-    <div class="fixed-message">
-        مرحبًا بكم في مكتب نبراس الرياض للاستقدام!
-        <a href="#contact-form" class="btn">اذهب إلى نموذج التواصل</a>
-    </div>
 
-
-    <!-- القسم الرئيسي -->
-    <header class="hero-section">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>نبراس الرياض للاستقدام</h1>
-            <p>نقدم خدمات استقدام مميزة وموثوقة</p>
-            <a href="#quick-order" class="cta-button">اطلب الآن</a>
-        </div>
-    </header>
-
-    <!-- قسم الطلب السريع -->
-    <section id="quick-order" class="quick-order">
-        <div class="container">
-            <div class="section-header">
-                <h2>طلب سريع</h2>
-                <p>املأ النموذج التالي وسنتواصل معك في أقرب وقت</p>
-            </div>
-            <form action="https://script.google.com/macros/s/AKfycbwyApa0ihYHwIyN3_NeYt7LCbPkiSv9q93XHp-ROGOc-1tEcTuqx_bGVQmRtIUOwmvL/exec" 
-            method="POST" 
-            class="order-form" 
-            onsubmit="submitForm(event)">
-                <div id="form-message" class="success-message" style="display:none;">تم إرسال الطلب بنجاح!</div>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="name">الاسم الكامل</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">رقم الجوال</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="job">المهنة</label>
-                        <select id="job" name="job" required onchange="updateCountryOptions()">
-                            <option value="" selected disabled>اختر المهنة</option>
-                            <option value="عاملة منزلية">عاملة منزلية</option>
-                            <option value="سائق خاص">سائق خاص</option>
-                            <option value="عامل منزلي">عامل منزلي</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="country">الجنسية</label>
-                        <select id="country" name="country" required>
-                            <option value="" selected disabled>اختر الجنسية</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="religion">الديانة</label>
-                        <select id="religion" name="religion" required>
-                            <option value="" selected disabled>اختر الديانة</option>
-                            <option value="مسلم/ة">مسلم/ة</option>
-                            <option value="غير مسلم/ ة">غير مسلم/ة</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="religion"> تفاصيل وشروط أخرى </label>
-                        <textarea name="contact_message" placeholder="اكتب هنا" required></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="submit-button">تقديم الطلب</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- قسم المميزات -->
-    <section class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>مميزاتنا</h2>
-                <p>نقدم لكم أفضل الخدمات </p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>سرعة في الإنجاز</h3>
-                    <p>نضمن لك سرعة إنجاز معاملتك</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💪</div>
-                    <h3>خبرة وكفاءة</h3>
-                    <p>خبرة تزيد عن 10 سنوات</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">✓</div>
-                    <h3>ضمان </h3>
-                    <p>ضمان عند المكتب 3 شهور</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- قسم التواصل -->
-    <section class="contact" id="contact-form">
-        <div class="container">
-            <div class="section-header">
-                <h2>تواصل معنا</h2>
-                <p>نحن هنا لخدمتك</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <h3>العنوان</h3>
-                        <p>الرياض، حي الشهداء، شارع خالد بن الوليد</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>رقم الجوال</h3>
-                        <p>0550777987</p>
-                        <p>0550777983</p>
-                    </div>
-                    <div class="info-item">
-                        <h3>البريد الإلكتروني</h3>
-                        <p>nebrasriyadh@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form onsubmit="submitContactForm(event)">
-                        <div class="form-group">
-                            <input type="text" name="contact_name" placeholder="الاسم الكامل" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" name="contact_phone" placeholder="رقم الجوال" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="contact_message" placeholder="رسالتك" required></textarea>
-                        </div>
-                       <button type="submit" class="submit-button">أرسال</button>
-                       <div id="contact-form-message" class="success-message" style="display:none;">تم إرسال رسالتك بنجاح!</div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>نبراس الرياض للاستقدام</h3>
-                    <p>خدمات استقدام موثوقة</p>
-                </div>
-                <div class="social-links">
-                    <h3>تابعنا على</h3>
-                    <div class="social-icons">
-                        <a href="https://snapchat.com/t/6FXjq5RZ" target="_blank">
-                            <img src="SNAPCHAT.png" alt="سناب شات">
-                        </a>
-                        <a href="https://www.tiktok.com/@nebras.riyadh" target="_blank">
-                            <img src="TIKTOK.png"                            alt="تيك توك">
-                        </a>
-                        <a href="https://wsend.co/966550777983" target="_blank">
-                            <img src="WHATSAPP.png" alt="WHATSAPP">
-                        </a>
-                        <a href="https://x.com/nbras_1222?s=21&t=FiiARyxpwP5vfx-o0MrIGw" target="_blank">
-                            <img src="X.png" alt="x">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 نبراس الرياض للاستقدام. جميع الحقوق محفوظة.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function submitForm(event) {
-            event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
-            const formMessage = document.getElementById('form-message');
-            formMessage.style.display = 'block'; // عرض رسالة التأكيد
-            document.querySelector('.order-form').reset(); // إعادة تعيين النموذج
-        }
-
-        function submitContactForm(event) {
-            event.preventDefault(); // منع إرسال النموذج بالطريقة الافتراضية
-            const contactFormMessage = document.getElementById('contact-form-message');
-            contactFormMessage.style.display = 'block'; // عرض رسالة التأكيد
-            document.querySelector('.contact-form form').reset(); // إعادة تعيين النموذج
-        }
-
-        function updateCountryOptions() {
-            const jobSelect = document.getElementById('job');
-            const countrySelect = document.getElementById('country');
-            countrySelect.innerHTML = ''; // مسح الخيارات السابقة
-            const countries = {
-                "عاملة منزلية": ["الفلبين", "اوغندا", "كينيا", "بانجلاديش", "اثيوبيا"],
-                "سائق خاص": ["الهند"],
-                "عامل منزلي": ["الفلبين", "اوغندا", "كينيا", "بانجلاديش", "اثيوبيا"]
-            };
-            const selectedJob = jobSelect.value;
-            if (countries[selectedJob]) {
-                countries[selectedJob].forEach(country => {
-                    const option = document.createElement('option');
-                    option.value = country;
-                    option.textContent = country;
-                    countrySelect.appendChild(option);
-                });
-            }
-        }
-    </script>
-</body>
-</html>
